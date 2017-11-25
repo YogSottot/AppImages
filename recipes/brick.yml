@@ -1,0 +1,30 @@
+app: brick
+
+ingredients:
+  package: brick
+  dist:    trusty
+  sources:
+    - deb http://us.archive.ubuntu.com/ubuntu/ trusty main universe
+  ppas:
+    - buglloc/brick
+
+
+script:
+  - ( cd usr/bin ; ln -sf ../../opt/brick/brick . )
+  - ( cd usr/bin ; ln -sf ../../opt/brick/bin/brick-client . )
+  - ( cd usr/lib/x86_64-linux-gnu/ ; ln -sf ../../../lib/x86_64-linux-gnu/libpng12.so.0 . )
+  - ( cd etc/pki/ ; ln -sf ../../var/lib/nssdb . )
+  - ( cd usr/share/X11/ ; ln -sf ../../../etc/X11/rgb.txt . )
+  - ( cd usr/share/applications/ ; ln -sf ../../../etc/gnome/defaults.list . )
+  - cat > brick.desktop <<EOF
+  - [Desktop Entry]
+  - Encoding=UTF-8
+  - Name=Brick
+  - GenericName=Internet Messenger
+  - Comment=Bitrix24 messenger
+  - Type=Application
+  - Categories=Network;InstantMessaging;
+  - Exec=brick
+  - Icon=brick
+  - Terminal=false
+  - EOF
