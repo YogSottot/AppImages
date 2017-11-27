@@ -40,6 +40,8 @@ libdbus-1-3
 libdrm2
 libegl1-mesa
 libfontconfig1
+#workaround for fedora?
+libfreetype
 libgbm1
 libgcc1
 # libgconf-2-4 # elementary OS 0.4 Loki does NOT have it
