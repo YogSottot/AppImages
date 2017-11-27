@@ -234,7 +234,7 @@ generate_status()
   mkdir -p ./tmp/archives/
   mkdir -p ./tmp/lists/partial
   touch tmp/pkgcache.bin tmp/srcpkgcache.bin
-  wget -q -c "https://github.com/YogSottot/AppImages/raw/master/excludedeblist"
+  wget -q -c "https://raw.githubusercontent.com/YogSottot/AppImages/freetype-remove/excludedeblist"
   rm status 2>/dev/null || true
   for PACKAGE in $(cat excludedeblist | cut -d "#" -f 1) ; do
     printf "Package: $PACKAGE\nStatus: install ok installed\nArchitecture: all\nVersion: 9:999.999.999\n\n" >> status
