@@ -31,7 +31,6 @@ libasound2
 libatk1.0-0
 libc6
 libc6-dev
-libcairo2
 libcups2
 # libcurl3 # Does draw in a lot of libs including security relevant ones; e.g., in supertux2; but otherwise get ../lib/x86_64-linux-gnu/libssl.so.1.0.0: version `OPENSSL_1.0.2' not found (required by /usr/lib/x86_64-linux-gnu/libcurl.so.4)
 # libcurl3-gnutls # https://github.com/AppImage/AppImages/issues/120#issuecomment-261749714
@@ -57,10 +56,8 @@ libgpg-error0
 libgtk2.0-0
 libgtk-3-0
 # libnss3  — brick need old version of this 
-libpango1.0-0
-libpango-1.0-0
-libpangocairo-1.0-0 # Workaround for: openSUSE: undefined symbol: hb_buffer_set_cluster_level?; commenting this out leads to square boxes instead of fonts
-libpangoft2-1.0-0 # Workaround for: openSUSE: undefined symbol: hb_buffer_set_cluster_level?; commenting this out leads to square boxes instead of fonts
+
+
 libstdc++6
 libtasn1-6
 libwayland-egl1-mesa # e.g., OpenRA
