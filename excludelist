@@ -131,8 +131,7 @@ libgobject-2.0.so.0
 # Workaround for:
 # Rectangles instead of fonts
 # https://github.com/AppImage/AppImages/issues/240
-libpangocairo-1.0.so.0
-libpango-1.0.so.0
+
 
 # Workaround for:
 # e.g., Spotify
