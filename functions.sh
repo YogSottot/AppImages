@@ -108,7 +108,7 @@ move_lib()
 # Delete blacklisted files
 delete_blacklisted()
 {
-  BLACKLISTED_FILES=$(cat_file_from_url https://github.com/YogSottot/AppImages/raw/master/excludelist | sed 's|#.*||g')
+  BLACKLISTED_FILES=$(cat_file_from_url https://raw.githubusercontent.com/YogSottot/AppImages/pango-bundle/excludelist | sed 's|#.*||g')
   echo $BLACKLISTED_FILES
   for FILE in $BLACKLISTED_FILES ; do
     FILES="$(find . -name "${FILE}" -not -path "./usr/optional/*")"
